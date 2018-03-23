@@ -1,0 +1,102 @@
+:root {
+  --primary: #0074ba;
+  --secondary: #cf2a2c;
+  --shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  --padding: 0.85em;
+  --font: 'IBM Plex Sans', sans-serif;
+  --fontSize: 0.55em;
+}
+
+body {
+  font-size: 2em;
+  color: #333;
+  box-sizing: border-box;
+  font-family: var(--font);
+  background-color: #e0e0e0;
+}
+
+header,
+section {
+  padding: var(--padding);
+  text-align: center;
+}
+
+header {
+  background-color: #3c4146;
+  color: #eef4fc;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+  padding: var(--padding);
+  font-family: var(--font);
+  font-size: var(--fontSize);
+  border-radius: 10px;
+  border: none;
+}
+
+h1,
+h2,
+h4 {
+  margin-bottom: 0.25em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+hr {
+  width: 75%;
+}
+
+footer {
+  padding: var(--padding);
+  font-size: 0.55em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+input[type='text'] {
+  background-color: #202326;
+  padding: var(--padding);
+  border: none;
+  width: 20%;
+  color: white;
+  font-size: 0.55em;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 1em;
+}
+
+#output {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3em;
+}
+
+li {
+  padding: var(--padding);
+}
+
+li:nth-child(2n) {
+  background-color: lightgrey;
+}
+
+.fa-linkedin,
+.fa-twitter {
+  margin: 0.25em;
+  color: var(--primary);
+}
+
+@media (max-width: 1265px) {
+  #output {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3.5em;
+  }
+}
