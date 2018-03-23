@@ -2,12 +2,10 @@
 
 _This App fetches data from the github API to get simple data from the users._
 
-<details>
 Made using:
-<br>
- CSS Grid
- <br>
- CSS Variables
- <br>
- ES6
-</details>
+
+* **CSS Grid**
+* **CSS Variables**
+* **ES6**
+
+[Api](https://developer.github.com/v3/)
