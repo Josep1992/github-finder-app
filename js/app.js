@@ -31,11 +31,15 @@ const getData = () => {
         </div>
         <div>
           <ul class="list-group">
-          <li class="list-group-item lead">Location: ${user.location}</li>
+          <li class="list-group-item lead">Location: ${
+            user.location == null ? '' : user.location
+          }</li>
           <li class="list-group-item lead">Repositories: ${
             user.public_repos
           }</li>
-          <li class="list-group-item lead">Bio: ${user.bio}</li>
+          <li class="list-group-item lead">Bio: ${
+            user.bio == null ? '' : user.bio
+          }</li>
           <li class="list-group-item lead">
           <a href="${user.html_url}" target="_blank" rel="noopener noreferrer">
           <i class="fa fa-github-alt fa-lg lead"></i> Click Me!</a></li>
@@ -48,6 +52,7 @@ const getData = () => {
     .catch(error => {
       if (error.status === 404) {
         output.innerHTML = `<h2 class="h2 text-danger">Please enter a valid Username.</h2>`;
+        console.log(error.status);
       }
     });
 };
