@@ -13,7 +13,7 @@ const getData = () => {
       if (res.status !== 200) {
         return Promise.reject({
           status: res.status,
-          statusText: res.statusText
+          statusText: res.statusText,
         });
       } else {
         return res.json();
@@ -22,17 +22,23 @@ const getData = () => {
     .then(user => {
       let html = `
         <div>
-          <h2>${user.name}</h2>
-          <img src="${user.avatar_url}" alt="avatar">
+          <h2 class="display-4 mb-4">${
+            user.name == null ? '😵' : user.name
+          }</h2>
+          <img src="${
+            user.avatar_url
+          }" alt="avatar" class="img-thumbnail mb-4" >
         </div>
         <div>
-          <ul>
-          <li>Location: ${user.location}</li>
-          <li>Repositories: ${user.public_repos}</li>
-          <li>Bio: ${user.bio}</li>
-          <li><a href="${
-            user.html_url
-          }" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt"></i> Click Me!</a></li>
+          <ul class="list-group">
+          <li class="list-group-item lead">Location: ${user.location}</li>
+          <li class="list-group-item lead">Repositories: ${
+            user.public_repos
+          }</li>
+          <li class="list-group-item lead">Bio: ${user.bio}</li>
+          <li class="list-group-item lead">
+          <a href="${user.html_url}" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-github-alt fa-lg lead"></i> Click Me!</a></li>
           </ul>
         </div>
         `;
@@ -41,7 +47,7 @@ const getData = () => {
     })
     .catch(error => {
       if (error.status === 404) {
-        output.innerHTML = `<h2>Username not found, please try another.</h2>`;
+        output.innerHTML = `<h2 class="h2 text-danger">Please enter a valid Username.</h2>`;
       }
     });
 };

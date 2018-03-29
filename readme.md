@@ -4,8 +4,7 @@ _This App fetches data from the **github API** to get simple data from the users
 
 Made using:
 
-* **CSS Grid**
-* **CSS Variables**
+* **Bootstrap 4**
 * **ES6**
 
 > _API Documentation_ [**Here**](https://developer.github.com/v3/)
