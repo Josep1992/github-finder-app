@@ -38,7 +38,7 @@ const getData = () => {
             user.public_repos
           }</li>
           <li class="list-group-item lead">Bio: ${
-            user.bio == null ? '' : user.bio
+            user.bio == null ? '⛔' : user.bio
           }</li>
           <li class="list-group-item lead">
           <a href="${user.html_url}" target="_blank" rel="noopener noreferrer">
