@@ -7,4 +7,6 @@ Made using:
 * **Bootstrap 4**
 * **ES6**
 
-> _API Documentation_ [**Here**](https://developer.github.com/v3/)
+> _API Documentation_ [_Here_](https://developer.github.com/v3/)
+
+> _Live Preview_ [_Here_](https://github-finder.netlify.com/)
