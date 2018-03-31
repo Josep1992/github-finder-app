@@ -51,7 +51,7 @@ const getData = () => {
     })
     .catch(error => {
       if (error.status === 404) {
-        output.innerHTML = `<h2 class="h2 text-danger">Please enter a valid Username.</h2>`;
+        output.innerHTML = `<h2 class="h2 lead text-danger">Please enter a valid Username.</h2>`;
         console.log(`error:${error.status}`);
       }
     });
