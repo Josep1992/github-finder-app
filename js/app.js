@@ -37,6 +37,8 @@ const getData = () => {
           <li class="list-group-item lead">Repositories: ${
             user.public_repos
           }</li>
+          <li class="list-group-item lead">Followers: ${user.followers}</li>
+          <li class="list-group-item lead">Following: ${user.following}</li>
           <li class="list-group-item lead">Bio: ${
             user.bio == null ? '⛔' : user.bio
           }</li>
