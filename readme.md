@@ -9,4 +9,3 @@ Made using:
 
 > _API Documentation_ [_Here_](https://developer.github.com/v3/)
 
-> _Live Preview_ [_Here_](https://github-finder.netlify.com/)
